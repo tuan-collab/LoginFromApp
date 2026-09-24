@@ -2,26 +2,6 @@
 ## Login Form – Validation với ErrorProvider
 ## Bai 4.1
 
-Bài tập Windows Forms (C#): xây dựng form đăng nhập có ẩn/hiện mật khẩu, kiểm tra dữ liệu bắt buộc bằng `ErrorProvider`, và gán phím tắt Enter/Esc.
-
-## Đề bài
-
-Xây dựng Login Form có Validation ErrorProvider, ẩn mật khẩu, gán AcceptButton/CancelButton.
-
-## Yêu cầu và cách đáp ứng
-
-| Yêu cầu | Cách thực hiện |
-|---|---|
-| Giao diện gồm `txtUsername`, `txtPassword`, `chkShowPassword`, `btnLogin`, `btnExit`, `errorProvider` | Khai báo đầy đủ trong `Form1.Designer.cs` |
-| Phím Enter kích hoạt `btnLogin`, phím Esc kích hoạt `btnExit` | `this.AcceptButton = btnLogin;` và `this.CancelButton = btnExit;` |
-| Tick `chkShowPassword` → hiện mật khẩu | `chkShowPassword_CheckedChanged` set `UseSystemPasswordChar = false` |
-| Bỏ tick → ẩn mật khẩu (`*`) | `UseSystemPasswordChar = true` |
-| Không để trống Tên đăng nhập & Mật khẩu | `ValidateInputs()` dùng `errorProvider.SetError()` báo lỗi khi rỗng |
-
-## Công nghệ
-
-- C# / .NET Windows Forms
-
 ## Cấu trúc project
 
 ```
@@ -31,13 +11,6 @@ LoginFormApp/
 ├── Program.cs            # Điểm khởi chạy ứng dụng
 └── README.md
 ```
-
-## Cách chạy
-
-1. Mở Visual Studio → **File > New Project** → chọn **Windows Forms App (.NET)**.
-2. Đặt tên project là `LoginFormApp` (trùng namespace trong code).
-3. Thay nội dung 3 file `Form1.cs`, `Form1.Designer.cs`, `Program.cs` bằng code trong repo.
-4. Nhấn **F5** để chạy.
 
 ## Kết quả
 
